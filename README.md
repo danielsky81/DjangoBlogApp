@@ -5,7 +5,7 @@
 ## Intial Steps
 
 1. Setting the virtual environment and activating it.
-1. Installing the Django 1.11.17
+1. Installing the Django 1.11.17 (*further update to 1.11.21 due to vurnability)
 1. Saving requirements
 1. Creating new django project called `blog_app`
 1. Running Django migrate
@@ -50,6 +50,14 @@ So now we've set up our new app and our project to serve out templates, media fi
 1. Because we're using image field, we need to add a library called `pillow` via the CLI `pip install pillow`. Once pillow is installed, we need to add it to the requirements for our project `pip freeze > requirements.txt`.
 1. Now we need to do migrations for `posts` via terminal `./manage.py makemigrations` and update this migration to our database `./manage.py migrate`.
 
-
 Now that we've created our models and our forms, then we can go ahead and start creating our views. After that, we'll add our URLs and our templates, which will tie our whole project together and make it a fully working project.
 
+1. Create views in the `views.py` and add new urls to `urls.py` file inside the `blog_app` folder to redirect users to the posts app. Then we need to import all views and create urlpatterns for them inside the `urls.py` file in the `posts` folder.
+
+## Templates creation
+
+1. Create a `template` folder in the root directory.
+1. Add a `base.html` template that's going to hold our navigation bar and allow us to navigate through the rest of the project.
+1. Add `custom.css` file to `css` folder inside `static`
+1. We need to create additional pages and import django forms form bootstrap library as follows `pip install django-forms-bootstrap`. We need to add this to the `INSTALLED_APPS` inside the `settings.py` file like so `django_forms_bootstrap`
+1. create our super user now that all of our views and templates have been created `./manage.py createsuperuser`.
