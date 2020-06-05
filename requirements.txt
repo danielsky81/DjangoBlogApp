@@ -1,5 +1,5 @@
 dj-database-url==0.5.0
-Django==1.11.21
+Django==1.11.29
 django-forms-bootstrap==3.1.0
 gunicorn==19.9.0
 Pillow==6.0.0
